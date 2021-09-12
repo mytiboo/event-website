@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Gotham";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/gotham/GothamSSm-Book.eot");
+  src: url("../fonts/gotham/GothamSSm-Book-.eot#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamSSm-Book.woff") format("woff"), url("../fonts/gotham/GothamSSm-Book.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/gotham/GothamSSm-Medium.eot");
+  src: url("../fonts/gotham/GothamSSm-Medium-.eot#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamSSm-Medium.woff") format("woff"), url("../fonts/gotham/GothamSSm-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 200;
+  font-style: normal;
+  src: url("../fonts/gotham/GothamSSm-Light.eot");
+  src: url("../fonts/gotham/GothamSSm-Light-.eot#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamSSm-Light.woff") format("woff"), url("../fonts/gotham/GothamSSm-Light.ttf") format("truetype");
+}
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 2px #000;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 0 !important;
+}
+
+.menu-section {
+  position: fixed;
+  width: 100%;
+  background: var(--primary, #532F87);
+}
+.icon {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke-width: 6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */

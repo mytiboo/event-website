@@ -1,0 +1,32 @@
+// Breakpoints taken from Bootstrap
+// https://getbootstrap.com/docs/5.0/layout/breakpoints/
+//
+// Try to always use @include media('>breakpoint') or @include media('>=breakpoint') for mobile first css.
+
+$breakpoints: (
+    sm: 576px, 
+    md: 768px, 
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+) !default;
+
+$media-expressions: (
+    'screen': 'screen', 
+    'print': 'print', 
+    'handheld': 'handheld',
+    'retina2x': (
+        '(-webkit-min-device-pixel-ratio: 2)', 
+        '(min-resolution: 192dpi)'
+    ), 
+    'retina3x': (
+        '(-webkit-min-device-pixel-ratio: 3)', 
+        '(min-resolution: 350dpi)'
+    )
+) !default;
+
+$unit-intervals: (
+    'px': 1, 
+    'em': 0.01, 
+    'rem': 0.1
+) !default;
