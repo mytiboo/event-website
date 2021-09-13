@@ -17,7 +17,11 @@
             <li class="menu-item">Réserver une démonstration</li>
         </ul>
         <div class="links">
-            <div class="link">Découvrir Mytiboo en vidéo</div>
+            <div class="link">
+                <a href="#" role="button" class="play-cta" data-bs-toggle="modal" data-bs-target="#dynamicVideoModal">
+                    Découvrir Mytiboo en vidéo
+                </a>
+            </div>
             <div class="link">
                 <a href="mailto:hellohello@mytiboo.fr">hellohello@mytiboo.fr</a>
             </div>
@@ -52,8 +56,10 @@
                         <li class="menu-item"><a href="#solution" data-action="scroll">Notre solution</a></li>
                         <li class="menu-item"><a href="#contact" data-action="scroll">Contact</a></li>
                         <li class="menu-item">
-                            <span class="small">Une démonstration gratuite ?</span>
-                            Prendre rendez-vous
+                            <a href="#" role="button" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                                <span class="small">Une démonstration gratuite ?</span>
+                                Prendre rendez-vous
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -87,9 +93,6 @@
                         Découvrir
                     </a>
                 </div>
-            </div>
-            <div class="hero-bottom">
-
             </div>
         </div>
     </header>
@@ -181,10 +184,10 @@
                 <div class="col-lg-6">
                     <div class="tablet">
                         <img src="assets/img/tablet.png" alt="Mytiboo app">
-                        <div class="play-cta">
+                        <a href="#" role="button" class="play-cta" data-bs-toggle="modal" data-bs-target="#dynamicVideoModal">
                             <img src="assets/img/icon-play-circle.svg" alt="play">
                             <span>Découvrir Mytiboo en vidéo</span>
-                        </div>
+                        </a>
                     </div>
                 </div>
                 <div class="col-lg-6 d-none d-lg-block">
@@ -267,10 +270,10 @@
         <div class="container-lg">
             <div class="row">
                 <div class="col">
-                    <div class="cta">
+                    <a href="#" role="button" class="cta" data-bs-toggle="modal" data-bs-target="#appointmentModal">
                         <img src="assets/img/icon-arrow-right.svg" alt="arrow">
                         <span>Prendre rendez-vous gratuitement</span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -332,10 +335,10 @@
                             <div class="description">
                                 Nous proposons des sessions découvertes assistées afin de pouvoir appréhender notre produit dans les meilleures conditions. Réservez votre créneau en quelques clics !
                             </div>
-                            <div class="cta">
+                            <a href="#" role="button" class="cta" data-bs-toggle="modal" data-bs-target="#appointmentModal">
                                 <img src="assets/img/icon-arrow-right.svg" alt="arrow">
                                 <span>Prendre rendez-vous gratuitement</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -357,10 +360,10 @@
                 </div>
                 <div class="col">
                     <div class="heading">Puisqu’une démonstration vaut mille mots</div>
-                    <div class="cta">
+                    <a href="#" role="button" class="cta" data-bs-toggle="modal" data-bs-target="#appointmentModal">
                         <img src="assets/img/icon-arrow-right.svg" alt="arrow">
                         <span>Prendre rendez-vous gratuitement</span>
-                    </div>
+                    </a>
                     <div class="heading">Recevez nos news</div>
                     <div class="news">
                         <input type="email" name="email" id="email" class="form-control" placeholder="Adresse mail">
@@ -405,9 +408,13 @@
                         <button class="btn">Envoyer</button>
                     </div>
                     <div class="links">
-                        <div class="link">Découvrir Mytiboo en vidéo</div>
+                        <div class="link">
+                            <a href="#" role="button" class="play-cta" data-bs-toggle="modal" data-bs-target="#dynamicVideoModal">
+                                Découvrir Mytiboo en vidéo
+                            </a>
+                        </div>
                         <div class="link">Mentions légales</div>
-                        <div class="link">hellohello@mytiboo.fr</div>
+                        <div class="link"><a href="mailto:hellohello@mytiboo.fr">hellohello@mytiboo.fr</a></div>
                         <div class="link">Suivez-nous sur les réseaux sociaux</div>
                     </div>
                     <div class="social">
@@ -429,11 +436,33 @@
         </div>
     </footer>
 
+    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <iframe src="https://meetings.hubspot.com/jlmytiboo?embed=true" frameborder="0" scrolling="no"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="dynamicVideoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="ratio ratio-16x9" id="player">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/409445/animateAnything.js"></script>
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="assets/js/menu.js"></script>
+    <script src="assets/js/modal-video.js"></script>
     <script src="assets/js/scripts.js"></script>
 </body>
 </html>
