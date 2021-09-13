@@ -1,0 +1,67 @@
+#appointmentModal {
+
+    .modal-dialog {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal-content {
+            overflow: hidden;
+            width: auto;
+            max-width: 90vw;
+
+            .modal-body {
+                padding: 3px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                iframe {
+                    overflow: hidden;
+                    height: 650px;
+                    width: 850px;
+                    max-width: 100%;
+                    max-height: 90vh;
+                }
+            }
+        }
+    }
+
+    @include media('>=lg') {
+        .modal-dialog {
+
+            .modal-content {
+
+                .modal-body {
+                    padding: 0 15px;
+
+                    iframe {
+                        height: 700px;
+                        width: 850px;
+                        max-width: 100%;
+                        max-height: 90vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#dynamicVideoModal {
+    .modal-dialog {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .modal-content {
+            width: auto;
+            max-width: 90vw;
+
+            .modal-body {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
