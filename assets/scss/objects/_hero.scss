@@ -1,34 +1,57 @@
 .hero-section {
     overflow: hidden;
-    height: 105vh;
+    background: $color-primary;
 
     .hero-wrapper {
         display: flex;
+        flex-flow: column;
         align-items: center;
+        padding: 0 40px;
+        background-image: url(/assets/img/mobile-header-background.png);
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-size: 101% auto;
+        padding-bottom: 70px;
+
+        .mobile-image {
+            margin: -150px -160px 0 -140px;
+        }
 
         .hero-text {
             color: #fff;
-            max-width: 40%;
+            margin-top: -60px;
 
             .title {
-                @include fontSize(48px);
-                @include lineHeight(58px);
-                font-weight: bold;
+                @include fontSize(22px);
+                @include lineHeight(26px);
+                font-weight: 700;
             }
 
             .question {
-                @include fontSize(20px);
+                @include fontSize(16px);
                 @include lineHeight(24px);
-                font-weight: medium;
+                font-weight: 500;
                 color: $color-primary-alt;
-                margin: 30px 0 50px;
+                margin: 25px 0 15px;
             }
 
             .uncover {
-                @include fontSize(20px);
+                cursor: pointer;
+                @include fontSize(18px);
                 @include lineHeight(24px);
-                font-weight: bold;
-                color: $color-primary-alt;
+                font-weight: 700;
+                color: #fff;
+                width: 70%;
+                text-align: center;
+
+                a {
+                    padding: 5px 0;
+                    background-image: url(/assets/img/mobile-appointment.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: auto 100%;
+                    text-decoration: none;
+                }
             }
         }
 
@@ -38,13 +61,62 @@
     }
 
 
-    @include media('>=xl') {
+    @include media('>=lg') {
         padding-top: 120px;
         margin-top: 80px;
         background-image: url(/assets/img/header-background-image.png);
-        background-repeat: no-repeat;
+        background-color: unset;
         background-position: top;
         background-size: 101% auto;
+        background-repeat: no-repeat;
+        height: 105vh;
+
+        .hero-wrapper {
+            flex-flow: row;
+            background-image: none;
+            padding: 0;
+
+            .mobile-image {
+                display: none;
+            }
+
+            .hero-text {
+                max-width: 40%;
+
+                .title {
+                    @include fontSize(48px);
+                    @include lineHeight(58px);
+                    font-weight: 700;
+                }
+
+                .question {
+                    @include fontSize(20px);
+                    @include lineHeight(24px);
+                    color: $color-primary-alt;
+                    margin: 30px 0 50px;
+                }
+
+                .uncover {
+                    @include fontSize(20px);
+                    @include lineHeight(24px);
+                    color: $color-primary-alt;
+                    text-align: left;
+
+                    a {
+                        background-size: auto 0%;
+                        transition: background-size .2s;
+
+                        &:hover {
+                            background-size: auto 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include media('>=xl') {
+        padding-top: 120px;
     }
 
     @include media('>=xxl') {

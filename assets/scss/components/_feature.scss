@@ -18,7 +18,7 @@
     .title {
         @include fontSize(26px);
         @include lineHeight(31px);
-        font-weight: bold;
+        font-weight: 700;
         margin: 15px 0 20px;
         color: $color-primary;
     }
@@ -26,6 +26,6 @@
     .description {
         @include fontSize(16px);
         @include lineHeight(19px);
-        font-weight: medium;
+        font-weight: 500;
     }
 }

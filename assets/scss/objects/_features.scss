@@ -1,8 +1,15 @@
 .features-section {
-    margin: 40px 0 150px;
+    margin: -2px 0 100px;
+    background: #fff;
+    z-index: 15;
+    padding-top: 100px;
 
     .swiper-slide {
         display: flex;
         justify-content: center;
+    }
+
+    @include media('>=lg') {
+        margin: 40px 0 150px;
     }
 }

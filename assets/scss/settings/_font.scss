@@ -8,10 +8,17 @@
 
 @font-face {
     font-family: "Gotham";
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
     src: url("../fonts/gotham/GothamSSm-Medium.eot");
     src: url("../fonts/gotham/GothamSSm-Medium-.eot#iefix") format("embedded-opentype"), url("../fonts/gotham/GothamSSm-Medium.woff") format("woff"), url("../fonts/gotham/GothamSSm-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gotham";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../fonts/gotham/GothamSSm-Bold.otf");
 }
 
 @font-face {
