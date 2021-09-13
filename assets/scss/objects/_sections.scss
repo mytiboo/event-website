@@ -24,7 +24,7 @@
         @include fontSize(26px);
         @include lineHeight(31px);
         color: $color-primary;
-        font-weight: bold;
+        font-weight: 700;
         max-width: 350px;
     }
 
@@ -35,7 +35,7 @@
         margin-top: 20px;
     }
 
-    @include media('>=xl') {
+    @include media('>=lg') {
         padding: 0;
         margin-top: 0;
 
@@ -68,6 +68,13 @@
 .main-app-section {
     padding: 0 25px;
     margin-top: 100px;
+    overflow: hidden;
+
+    .section-image {
+        @include media('<xl') {
+            margin-right: -100px;
+        }
+    }
 
     .wrapper {
         margin-top: 70px;
@@ -82,7 +89,7 @@
             @include fontSize(26px);
             @include lineHeight(31px);
             color: $color-primary;
-            font-weight: bold;
+            font-weight: 700;
             max-width: 350px;
 
             .featured {
@@ -91,7 +98,7 @@
         }
     }
 
-    @include media('>=xl') {
+    @include media('>=lg') {
         padding: 0;
         margin-top: 0;
 
@@ -109,16 +116,19 @@
 .last-app-section {
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding: 100px 25px;
     min-height: 100vh;
 
     .wrapper {
         display: flex;
+        justify-content: center;
+        text-align: center;
 
         .icon {
+            display: none;
             width: 150px;
             margin-right: 50px;
-            flex-shrink: 0
+            flex-shrink: 0;
         }
 
         .text {
@@ -128,87 +138,134 @@
                 @include fontSize(20px);
                 @include lineHeight(24px);
                 color: $color-primary;
-                font-weight: bold;
+                font-weight: 700;
                 margin: 20px 0 30px;
             }
 
             .cta {
-                display: flex;
-                align-items: center;
-                @include fontSize(20px);
-                @include lineHeight(24px);
-                color: $color-primary;
-                font-weight: bold;
-                margin-top: 20px;
+                margin-top: 40px;
 
-                img {
-                    width: 20px;
-                    margin-right: 15px;
+                @include media('>=lg') {
+                    margin-top: 0;
                 }
             }
         }
     }
 
-    @include media('>=xl') {
+    @include media('>=lg') {
         height: 500px;
         background-image: url(/assets/img/footer.png);
         background-repeat: no-repeat;
         background-size: 101% auto;
         background-position: bottom left;
         margin-bottom: -2px;
+        padding: 0;
+        padding-top: 100px;
         padding-bottom: 100px;
+
+        .wrapper {
+            justify-content: flex-start;
+            text-align: left;
+
+            .icon {
+                display: block;
+            }
+        }
     }
 }
 
 footer {
     background: $color-primary;
     color: #fff;
-    padding: 80px 0;
+    padding: 80px 20px 30px;
 
-    .main-footer-col {
-        display: flex;
-        flex-flow: column;
-        max-width: 400px;
-        @include fontSize(22px);
-        @include lineHeight(26px);
-        font-weight: bold;
-        margin-right: 50px;
+    .desktop {
 
-        img {
-            width: 150px;
-            margin-bottom: 30px;
+        .main-footer-col {
+            display: flex;
+            flex-flow: column;
+            max-width: 300px;
+            @include fontSize(22px);
+            @include lineHeight(26px);
+            font-weight: 700;
+            margin-right: 20px;
+
+            img {
+                width: 150px;
+                margin-bottom: 30px;
+            }
+
+            @include media('>=xl') {
+                max-width: 400px;
+                margin-right: 50px;
+            }
+        }
+
+        .link {
+            @include fontSize(16px);
+            @include lineHeight(19px);
+            margin: 10px 0;
+        }
+
+        .cta {
+            color: #fff;
+            background: none;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        .bottom {
+            display: flex;
+            height: 75%;
+            align-items: flex-end;
+        }
+    }
+
+    .mobile {
+        min-height: 80vh;
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 70px;
+
+            img {
+                width: 120px;
+            }
+        }
+
+        .demonstration {
+            @include fontSize(20px);
+            @include lineHeight(24px);
+            font-weight: 700;
+            margin-bottom: 50px
+        }
+
+        .links {
+            margin-top: 100px;
+            margin-bottom: 20px;
+
+            .link {
+                margin: 10px 0;
+            }
         }
     }
 
     .heading {
         @include fontSize(20px);
         @include lineHeight(24px);
-        font-weight: bold;
-    }
+        margin: 5px 0;
 
-    .link {
-        @include fontSize(16px);
-        @include lineHeight(19px);
-        margin: 10px 0;
-    }
-
-    .cta {
-        display: flex;
-        align-items: center;
-        @include fontSize(20px);
-        @include lineHeight(24px);
-        font-weight: bold;
-        margin-top: 20px;
-
-        img {
-            width: 20px;
-            margin-right: 15px;
+        @include media('>=lg') {
+            font-weight: 500;
         }
     }
 
     .news {
-        margin-top: 30px;
         display: flex;
+        align-items: center;
 
         input {
             border: none;
@@ -217,6 +274,8 @@ footer {
             background: none;
             color: #fff;
             caret-color: #fff;
+            padding: 2px;
+            height: 25px;
 
             &:focus {
                 color: #fff;
@@ -237,5 +296,9 @@ footer {
                 color: $color-secondary;
             }
         }
+    }
+
+    @include media('>=lg') {
+        padding: 80px 20px;
     }
 }

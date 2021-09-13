@@ -10,12 +10,12 @@
         img {
             width: 80%;
 
-            @include media('>=xl') {
+            @include media('>=lg') {
                 width: 100%;
             }
         }
 
-        .cta {
+        .play-cta {
             display: none;
             align-items: center;
             justify-content: center;
@@ -23,7 +23,7 @@
             @include fontSize(20px);
             line-height: 1;
             color: $color-primary;
-            font-weight: bold;
+            font-weight: 700;
 
             img {
                 width: 35px;
@@ -34,7 +34,7 @@
                 padding-top: 2px;
             }
 
-            @include media('>=xl') {
+            @include media('>=lg') {
                 display: flex;
             }
         }
@@ -48,17 +48,16 @@
 .warranties-header-section {
     display: flex;
     align-items: flex-end;
-    padding-bottom: 40px;
     text-align: center;
-    @include fontSize(32px);
-    @include lineHeight(39px);
-    font-weight: bold;
+    @include fontSize(22px);
+    @include lineHeight(29px);
+    font-weight: 700;
     color: #fff;
     background-image: url(/assets/img/mobile-warranty-header.png);
     background-repeat: no-repeat;
     background-size: 101% 100%;
     margin-bottom: -2px;
-    padding-top: 100px;
+    padding: 100px 20px 40px;
 
     .crossed {
         text-decoration: line-through;
@@ -69,7 +68,9 @@
         color: $color-secondary;
     }
 
-    @include media('>=xl') {
+    @include media('>=lg') {
+        @include fontSize(32px);
+        @include lineHeight(39px);
         height: 450px;
         background-image: url(/assets/img/warranty-top.png);
     }
@@ -86,21 +87,13 @@
     padding-bottom: 100px;
 
     .cta {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @include fontSize(20px);
-        @include lineHeight(24px);
-        color: $color-primary;
-        font-weight: bold;
 
-        img {
-            width: 20px;
-            margin-right: 15px;
+        @include media('>=lg') {
+            justify-content: center;
         }
     }
 
-    @include media('>=xl') {
+    @include media('>=lg') {
         height: 500px;
         background-image: url(/assets/img/warranty-bottom.png);
     }

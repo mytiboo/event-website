@@ -1,6 +1,8 @@
 const defaultSwiperOptions = {
     autoplay: {
         delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
     },
     loop: true,
 }
@@ -11,7 +13,11 @@ const mobileFeatureSwiper = new Swiper('#mobile-feature-slider', {
 
 const desktopWarrantySwiper = new Swiper('#vertical-warranty-slider', {
     ...defaultSwiperOptions,
-    loop: false,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: false,
+    },
     direction: "vertical",
     slidesPerView: 3,
 });
@@ -19,7 +25,7 @@ const desktopWarrantySwiper = new Swiper('#vertical-warranty-slider', {
 const smoothScroll = (event) => {
     event.preventDefault();
 
-    const yOffset = -50;
+    const yOffset = event.target.dataset.offset || -50;
     const targetSelector = event.target.getAttribute('href');
     const targetElement = document.querySelector(targetSelector);
     const targetTopOffset = targetElement.offsetTop - yOffset;

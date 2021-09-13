@@ -4,22 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Tiboo</title>
+    <title>Mytiboo : le vocal au service de la petite enfance</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
+    <div id="mobile-menu">
+        <ul class="menu">
+            <li class="menu-item"><a href="#home" data-action="scroll" data-offset="0">Accueil</a></li>
+            <li class="menu-item"><a href="#solution" data-action="scroll" data-offset="50">Notre solution</a></li>
+            <li class="menu-item"><a href="#contact" data-action="scroll">Contact</a></li>
+            <li class="menu-item">Réserver une démonstration</li>
+        </ul>
+        <div class="links">
+            <div class="link">Découvrir Mytiboo en vidéo</div>
+            <div class="link">
+                <a href="mailto:hellohello@mytiboo.fr">hellohello@mytiboo.fr</a>
+            </div>
+        </div>
+        <div class="social">
+            <div class="media">
+                <a target="_blank" href="https://fr.linkedin.com/company/mytiboo"><img src="assets/img/social/Linkedin-y.svg" alt="linked in"></a>
+            </div>
+            <div class="media">
+                <a target="_blank" href="https://facebook.com/pg/MytibooFR/posts/"><img src="assets/img/social/Facebook-y.svg" alt="facebook"></a>
+            </div>
+            <div class="media">
+                <a target="_blank" href="https://www.instagram.com/mytiboo/?hl=fr"><img src="assets/img/social/Instagram-y.svg" alt="instagram"></a>
+            </div>
+            <div class="media">
+                <a target="_blank" href="https://mobile.twitter.com/mytiboofr?lang=fr"><img src="assets/img/social/Twitter-y.svg" alt="Twitter"></a>
+            </div>
+        </div>
+    </div>
+
     <nav class="menu-section" id="home">
         <div class="container-lg">
-            <div class="row align-items-center align-items-xl-end">
+            <div class="row align-items-center align-items-lg-end">
                 <div class="col">
                     <div class="logo">
                         <img src="assets/img/logo-standard-white.svg" alt="My Tiboo Logo">
                     </div>
                 </div>
-                <div class="col-auto d-none d-xl-block">
+                <div class="col-auto d-none d-lg-block">
                     <ul class="menu">
-                        <li class="menu-item"><a href="#home" data-action="scroll">Accueil</a></li>
+                        <li class="menu-item"><a href="#home" data-action="scroll" data-offset="0">Accueil</a></li>
                         <li class="menu-item"><a href="#solution" data-action="scroll">Notre solution</a></li>
                         <li class="menu-item"><a href="#contact" data-action="scroll">Contact</a></li>
                         <li class="menu-item">
@@ -28,7 +57,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="col-auto d-block d-xl-none">
+                <div class="col-auto d-block d-lg-none">
                     <div id="menu-toggler">
                         <svg id="i1" class="icon" viewBox="0 0 100 100">
                             <path id="top-line-1" d="M30,37 L70,37"></path>
@@ -43,6 +72,9 @@
 
     <header class="hero-section">
         <div class="container-lg hero-wrapper">
+            <div class="mobile-image">
+                <img src="assets/img/header-image.png" alt="child playing with toys">
+            </div>
             <div class="hero-text">
                 <div class="title">
                     Le Cahier de transmissions Numérique et intelligent de la Petite Enfance
@@ -51,15 +83,20 @@
                     En quoi est-ce révolutionnaire ?
                 </div>
                 <div class="uncover">
-                    Découvrir
+                    <a href="#features" data-action="scroll" data-offset="100">
+                        Découvrir
+                    </a>
                 </div>
+            </div>
+            <div class="hero-bottom">
+
             </div>
         </div>
     </header>
 
-    <section class="features-section">
+    <section class="features-section" id="features">
         <div class="container-lg">
-            <div class="row d-xl-none">
+            <div class="row d-lg-none">
                 <div class="col">
                     <div class="swiper" id="mobile-feature-slider">
                         <div class="swiper-wrapper">
@@ -94,7 +131,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row d-none d-xl-flex">
+            <div class="row d-none d-lg-flex">
                 <div class="col d-flex justify-content-center">
                     <div class="feature">
                         <div class="icon"><img src="assets/img/feature-icon-3.svg"></div>
@@ -127,7 +164,7 @@
     </section>
 
     <section class="warranties-header-section" id="solution">
-        <div class="container-xl">
+        <div class="container-lg">
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="warranties-heading">
@@ -139,18 +176,18 @@
     </section>
 
     <section class="warranties-section">
-        <div class="container-xl">
+        <div class="container-lg">
             <div class="row align-items-center">
-                <div class="col-xl-6">
+                <div class="col-lg-6">
                     <div class="tablet">
                         <img src="assets/img/tablet.png" alt="Mytiboo app">
-                        <div class="cta">
+                        <div class="play-cta">
                             <img src="assets/img/icon-play-circle.svg" alt="play">
                             <span>Découvrir Mytiboo en vidéo</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-6 d-none d-xl-block">
+                <div class="col-lg-6 d-none d-lg-block">
                     <div class="swiper" id="vertical-warranty-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -192,7 +229,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col d-flex flex-column align-items-center d-xl-none">
+                <div class="col d-flex flex-column align-items-center d-lg-none">
                     <div class="warranty">
                         <div class="icon">
                             <img src="assets/img/icon-microphone.svg" alt="microphone">
@@ -227,12 +264,12 @@
     </section>
 
     <section class="warranties-footer-section">
-        <div class="container-xl">
+        <div class="container-lg">
             <div class="row">
                 <div class="col">
                     <div class="cta">
                         <img src="assets/img/icon-arrow-right.svg" alt="arrow">
-                        <span>Prenez rendez-vous gratuitement</span>
+                        <span>Prendre rendez-vous gratuitement</span>
                     </div>
                 </div>
             </div>
@@ -240,10 +277,10 @@
     </section>
 
     <section class="apps-section">
-        <div class="container-xl">
+        <div class="container-lg">
             <div class="row">
-                <div class="col-xl-6"><div class="section-image"><img src="assets/img/family-1.png" alt="family"></div></div>
-                <div class="col-xl-6 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-6"><div class="section-image"><img src="assets/img/family-1.png" alt="family"></div></div>
+                <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center">
                     <div class="wrapper">
                         <div class="app-logos">
                             <img src="assets/img/logo-creche.svg" alt="mytiboo creche logo">
@@ -262,10 +299,10 @@
     </section>
 
     <section class="main-app-section">
-        <div class="container-xl">
+        <div class="container-lg">
             <div class="row">
-                <div class="col-xl-6 order-xl-2"><img src="assets/img/family-2.png" alt="family"></div>
-                <div class="col-xl-6 order-xl-1 d-flex flex-column justify-content-center align-items-center">
+                <div class="col-lg-6 order-lg-2"><div class="section-image"><img src="assets/img/family-2.png" alt="family"></div></div>
+                <div class="col-lg-6 order-lg-1 d-flex flex-column justify-content-center align-items-center">
                     <div class="wrapper">
                         <img src="assets/img/logo-standard.svg" alt="mytiboo logo">
                         <div class="section-title">
@@ -278,9 +315,12 @@
     </section>
 
     <section class="last-app-section">
-        <div class="container-xl">
+        <div class="container-lg">
             <div class="row align-items-center justify-content-end">
-                <div class="col-xl-6">
+                <div class="col-12 d-block d-lg-none">
+                    <img src="assets/img/family-3-mobile.png" alt="kid using mytiboo app">
+                </div>
+                <div class="col-lg-6">
                     <div class="wrapper">
                         <div class="icon">
                             <img src="assets/img/icon-calendar.svg" alt="calendar">
@@ -294,7 +334,7 @@
                             </div>
                             <div class="cta">
                                 <img src="assets/img/icon-arrow-right.svg" alt="arrow">
-                                <span>Prenez rendez-vous gratuitement</span>
+                                <span>Prendre rendez-vous gratuitement</span>
                             </div>
                         </div>
                     </div>
@@ -304,8 +344,8 @@
     </section>
 
     <footer id="contact">
-        <div class="container-xl">
-            <div class="row">
+        <div class="container-lg">
+            <div class="row d-none d-lg-flex desktop">
                 <div class="main-footer-col">
                     <img src="assets/img/logo-standard-white.svg" alt="mytiboo logo">
                     <span>Accompagner les professionnels de la petite enfance pour l’avenir de nos enfants</span>
@@ -319,7 +359,7 @@
                     <div class="heading">Puisqu’une démonstration vaut mille mots</div>
                     <div class="cta">
                         <img src="assets/img/icon-arrow-right.svg" alt="arrow">
-                        <span>Prenez rendez-vous gratuitement</span>
+                        <span>Prendre rendez-vous gratuitement</span>
                     </div>
                     <div class="heading">Recevez nos news</div>
                     <div class="news">
@@ -334,10 +374,54 @@
                     </div>
                     <div class="bottom">
                         <div class="social">
-                            Suivez-nous sur les réseaux sociaux
-                            <div class="medias">
-                                <img src="" alt="">
+                            <span>Suivez-nous sur les réseaux sociaux</span>
+                            <div class="media">
+                                <a target="_blank" href="https://fr.linkedin.com/company/mytiboo"><img src="assets/img/social/Linkedin-y.svg" alt="linked in"></a>
                             </div>
+                            <div class="media">
+                                <a target="_blank" href="https://facebook.com/pg/MytibooFR/posts/"><img src="assets/img/social/Facebook-y.svg" alt="facebook"></a>
+                            </div>
+                            <div class="media">
+                                <a target="_blank" href="https://www.instagram.com/mytiboo/?hl=fr"><img src="assets/img/social/Instagram-y.svg" alt="instagram"></a>
+                            </div>
+                            <div class="media">
+                                <a target="_blank" href="https://mobile.twitter.com/mytiboofr?lang=fr"><img src="assets/img/social/Twitter-y.svg" alt="Twitter"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex d-lg-none mobile">
+                <div class="col-12">
+                    <div class="logo">
+                        <img src="assets/img/logo-standard-white.svg" alt="mytiboo logo">
+                    </div>
+                    <div class="demonstration">
+                        Demandez une démonstration gratuite
+                    </div>
+                    <div class="heading">Recevez nos news</div>
+                    <div class="news">
+                        <input type="email" name="email" id="email" class="form-control" placeholder="Adresse mail">
+                        <button class="btn">Envoyer</button>
+                    </div>
+                    <div class="links">
+                        <div class="link">Découvrir Mytiboo en vidéo</div>
+                        <div class="link">Mentions légales</div>
+                        <div class="link">hellohello@mytiboo.fr</div>
+                        <div class="link">Suivez-nous sur les réseaux sociaux</div>
+                    </div>
+                    <div class="social">
+                        <div class="media">
+                            <a target="_blank" href="https://fr.linkedin.com/company/mytiboo"><img src="assets/img/social/Linkedin-y.svg" alt="linked in"></a>
+                        </div>
+                        <div class="media">
+                            <a target="_blank" href="https://facebook.com/pg/MytibooFR/posts/"><img src="assets/img/social/Facebook-y.svg" alt="facebook"></a>
+                        </div>
+                        <div class="media">
+                            <a target="_blank" href="https://www.instagram.com/mytiboo/?hl=fr"><img src="assets/img/social/Instagram-y.svg" alt="instagram"></a>
+                        </div>
+                        <div class="media">
+                            <a target="_blank" href="https://mobile.twitter.com/mytiboofr?lang=fr"><img src="assets/img/social/Twitter-y.svg" alt="Twitter"></a>
                         </div>
                     </div>
                 </div>

@@ -3,7 +3,7 @@
     top: 0;
     width: 100%;
     background: $color-primary;
-    padding: 15px;
+    padding: 5px 15px;
     z-index: 100;
 
     .logo {
@@ -21,11 +21,11 @@
         @include fontSize(20px);
         @include lineHeight(21px);
         color: #fff;
-        font-weight: 600;
+        font-weight: 500;
 
         .menu-item {
             text-align: center;
-            margin: 0 50px;
+            margin: 0 20px;
             transition: all .2s;
 
             .small {
@@ -46,6 +46,10 @@
             &:hover {
                 color: $color-secondary;
             }
+
+            @include media('>=xl') {
+                margin: 0 50px;
+            }
         }
     }
 
@@ -65,7 +69,8 @@
         }
     }
 
-    @include media('>=xl') {
+    @include media('>=lg') {
+        padding: 15px;
         padding: 40px 0 20px;
 
         .logo {
