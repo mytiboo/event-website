@@ -1,0 +1,241 @@
+.apps-section {
+    padding: 0 25px;
+    margin-top: 70px;
+
+    .section-image {
+        @include media('<xl') {
+            margin-left: -120px;
+        }
+    }
+
+    .app-logos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        > img {
+            width: 100px;
+            margin: 0 15px;
+        }
+    }
+
+    .section-title {
+        @include fontSize(26px);
+        @include lineHeight(31px);
+        color: $color-primary;
+        font-weight: bold;
+        max-width: 350px;
+    }
+
+    .section-description {
+        @include fontSize(20px);
+        @include lineHeight(24px);
+        max-width: 500px;
+        margin-top: 20px;
+    }
+
+    @include media('>=xl') {
+        padding: 0;
+        margin-top: 0;
+
+        .app-logos {
+            justify-content: flex-start;
+            margin-top: 0;
+
+            > img {
+                width: 140px;
+                margin: 0;
+
+                &:first-child {
+                    margin-right: 100px;
+                }
+            }
+        }
+
+        .section-title {
+            @include fontSize(26px);
+            @include lineHeight(31px);
+        }
+
+        .section-description {
+            @include fontSize(16px);
+            @include lineHeight(19px);
+        }
+    }
+}
+
+.main-app-section {
+    padding: 0 25px;
+    margin-top: 100px;
+
+    .wrapper {
+        margin-top: 70px;
+        text-align: center;
+
+        img {
+            width: 120px;
+        }
+
+        .section-title {
+            margin-top: 45px;
+            @include fontSize(26px);
+            @include lineHeight(31px);
+            color: $color-primary;
+            font-weight: bold;
+            max-width: 350px;
+
+            .featured {
+                color: $color-secondary;
+            }
+        }
+    }
+
+    @include media('>=xl') {
+        padding: 0;
+        margin-top: 0;
+
+        .wrapper {
+            margin-top: 0;
+            text-align: left;
+
+            img {
+                width: 170px;
+            }
+        }
+    }
+}
+
+.last-app-section {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    min-height: 100vh;
+
+    .wrapper {
+        display: flex;
+
+        .icon {
+            width: 150px;
+            margin-right: 50px;
+            flex-shrink: 0
+        }
+
+        .text {
+            max-width: 430px;
+
+            .title {
+                @include fontSize(20px);
+                @include lineHeight(24px);
+                color: $color-primary;
+                font-weight: bold;
+                margin: 20px 0 30px;
+            }
+
+            .cta {
+                display: flex;
+                align-items: center;
+                @include fontSize(20px);
+                @include lineHeight(24px);
+                color: $color-primary;
+                font-weight: bold;
+                margin-top: 20px;
+
+                img {
+                    width: 20px;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+
+    @include media('>=xl') {
+        height: 500px;
+        background-image: url(/assets/img/footer.png);
+        background-repeat: no-repeat;
+        background-size: 101% auto;
+        background-position: bottom left;
+        margin-bottom: -2px;
+        padding-bottom: 100px;
+    }
+}
+
+footer {
+    background: $color-primary;
+    color: #fff;
+    padding: 80px 0;
+
+    .main-footer-col {
+        display: flex;
+        flex-flow: column;
+        max-width: 400px;
+        @include fontSize(22px);
+        @include lineHeight(26px);
+        font-weight: bold;
+        margin-right: 50px;
+
+        img {
+            width: 150px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .heading {
+        @include fontSize(20px);
+        @include lineHeight(24px);
+        font-weight: bold;
+    }
+
+    .link {
+        @include fontSize(16px);
+        @include lineHeight(19px);
+        margin: 10px 0;
+    }
+
+    .cta {
+        display: flex;
+        align-items: center;
+        @include fontSize(20px);
+        @include lineHeight(24px);
+        font-weight: bold;
+        margin-top: 20px;
+
+        img {
+            width: 20px;
+            margin-right: 15px;
+        }
+    }
+
+    .news {
+        margin-top: 30px;
+        display: flex;
+
+        input {
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px solid #fff;
+            background: none;
+            color: #fff;
+            caret-color: #fff;
+
+            &:focus {
+                color: #fff;
+                background: none;
+                outline: none;
+                box-shadow: none;
+            }
+
+            &::placeholder {
+                color: #ececec;
+            }
+        }
+
+        button {
+            color: #fff;
+
+            &:hover {
+                color: $color-secondary;
+            }
+        }
+    }
+}

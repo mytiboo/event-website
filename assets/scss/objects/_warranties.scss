@@ -1,0 +1,107 @@
+.warranties-section {
+    background: $color-primary-alt;
+    padding: 35px 0 15px;
+
+    .tablet {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+        img {
+            width: 80%;
+
+            @include media('>=xl') {
+                width: 100%;
+            }
+        }
+
+        .cta {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            @include fontSize(20px);
+            line-height: 1;
+            color: $color-primary;
+            font-weight: bold;
+
+            img {
+                width: 35px;
+                margin-right: 20px;
+            }
+
+            span {
+                padding-top: 2px;
+            }
+
+            @include media('>=xl') {
+                display: flex;
+            }
+        }
+    }
+
+    .swiper {
+        height: 800px;
+    }
+}
+
+.warranties-header-section {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 40px;
+    text-align: center;
+    @include fontSize(32px);
+    @include lineHeight(39px);
+    font-weight: bold;
+    color: #fff;
+    background-image: url(/assets/img/mobile-warranty-header.png);
+    background-repeat: no-repeat;
+    background-size: 101% 100%;
+    margin-bottom: -2px;
+    padding-top: 100px;
+
+    .crossed {
+        text-decoration: line-through;
+        color: $color-primary;
+    }
+
+    .featured {
+        color: $color-secondary;
+    }
+
+    @include media('>=xl') {
+        height: 450px;
+        background-image: url(/assets/img/warranty-top.png);
+    }
+}
+
+.warranties-footer-section {
+    display: flex;
+    align-items: flex-start;
+    padding-top: 100px;
+    background-image: url(/assets/img/mobile-warranty-bottom.png);
+    background-repeat: no-repeat;
+    background-size: 101% 100%;
+    margin-top: -2px;
+    padding-bottom: 100px;
+
+    .cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include fontSize(20px);
+        @include lineHeight(24px);
+        color: $color-primary;
+        font-weight: bold;
+
+        img {
+            width: 20px;
+            margin-right: 15px;
+        }
+    }
+
+    @include media('>=xl') {
+        height: 500px;
+        background-image: url(/assets/img/warranty-bottom.png);
+    }
+}
