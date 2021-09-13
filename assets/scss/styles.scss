@@ -1,0 +1,40 @@
+@import "../bootstrap/functions";
+
+// Include any default variable overrides here
+$grid-breakpoints: (
+    xs: 0,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1300px,
+    xxl: 1700px
+);
+
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1240px,
+    xxl: 1640px
+);
+
+@import "../bootstrap/variables";
+@import "../bootstrap/mixins";
+@import "../bootstrap/root";
+
+@import "../bootstrap/utilities";
+@import "../bootstrap/reboot";
+@import "../bootstrap/containers";
+@import "../bootstrap/grid";
+@import "../bootstrap/forms";
+@import "../bootstrap/buttons";
+
+@import "../bootstrap/utilities/api";
+
+@import 'settings';
+@import 'tools';
+@import 'generic';
+@import 'base';
+@import 'objects';
+@import 'components';
+@import 'trumps';

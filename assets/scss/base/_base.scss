@@ -1,0 +1,15 @@
+body {
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    &:hover {
+        color: inherit;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
